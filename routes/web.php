@@ -16,7 +16,7 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    return view('layouts');
+    return view('home');
 });
 
 Route::get('/register',[UserController::class,'create']);
@@ -30,3 +30,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/hotels', function () {
+    return view('web/hotels');
+});
+Route::get('/tours', function () {
+    return view('web/tours');
+});
+Route::get('/route', function () {
+    return view('web/route');
+});
+Route::get('/airlines', function () {
+    return view('web/airlines');
+});
