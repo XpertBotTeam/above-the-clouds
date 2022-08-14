@@ -28,6 +28,14 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+Auth::routes();
+ Route::group(['middleware' => ['auth','isAdmin']], function () {
+
+   Route::get('/dashboard', function () {
+      return view('admin');
+   });
+
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/hotels', function () {
