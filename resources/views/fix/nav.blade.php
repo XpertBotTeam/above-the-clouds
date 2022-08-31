@@ -26,7 +26,7 @@
           <a class="nav-link" href="{{url('/tours')}}">Tours</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/route')}}">Route</a>
+          <a class="nav-link" href="{{url('/covidstatus')}}">Covid-Status</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{url('/')}}">✈️ ☁️ ✈️ 🌥️</a>

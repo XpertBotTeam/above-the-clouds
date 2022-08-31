@@ -1,8 +1,10 @@
 <?php
 
+use App\Services\CovidController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\hotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +24,9 @@ Route::get('/', function () {
 Route::get('/register',[UserController::class,'create']);
 Route::get('/admin',[AdminController::class,'index']);
 Route::post('/users',[UserController::class, 'store']);
-
+Route::get('/hotels',[hotelController::class,'index']);
 Auth::routes();
-
+Route::get('/covidstatus',[CovidController::class,'index']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
@@ -38,14 +40,12 @@ Auth::routes();
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/hotels', function () {
-    return view('web/hotels');
-});
+
 Route::get('/tours', function () {
     return view('web/tours');
 });
-Route::get('/route', function () {
-    return view('web/route');
+Route::get('/covidstatus', function () {
+    return view('web/covidstatus');
 });
 Route::get('/airlines', function () {
     return view('web/airlines');
