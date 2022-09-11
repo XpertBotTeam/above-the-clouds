@@ -17,7 +17,7 @@
 
       <ul class="navbar-nav">
         <li class="nav-item ">
-          <a class="nav-link" href="{{url('/airlines')}}">Airlines </a>
+          <a class="nav-link" href="{{url('http://booking.com')}}">Airlines </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url('/hotels')}}">Hotels</a>

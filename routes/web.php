@@ -48,5 +48,6 @@ Route::get('/covidstatus', function () {
     return view('web/covidstatus');
 });
 Route::get('/airlines', function () {
-    return view('web/airlines');
+    return redirect()->route("http://booking.com");
 });
+
